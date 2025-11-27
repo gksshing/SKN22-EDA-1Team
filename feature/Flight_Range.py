@@ -29,8 +29,10 @@ class TechScoreProcessor:
     '''
     def __init__(self):
         # 구간 기준 설정 [0, 1, 2, 3, 4, float('inf')]
-        self.bins = [0, 1, 2, 3, 4 ,float('inf')]
-        self.labels = ['terrible','bad','soso','good','great']
+        # self.bins = [0, 1, 2, 3, 4 ,float('inf')]
+        self.bins = [0, 2, 3, 4 ,float('inf')]
+        # self.labels = ['terrible','bad','soso','good','great']
+        self.labels = ['bad','soso','good','great']
        
     def process(self, df: pd.DataFrame) -> pd.DataFrame:
         df['Tech_score_range'] = pd.cut(
